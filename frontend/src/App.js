@@ -2,13 +2,16 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Navigate, Link } from "react-router-dom";
 import ProfileScreen from "./Inayah/ProfileScreen";
 import HomePageServices from "./Inayah/HomePageServices";
+import HomePage from "./yu/homepage";
+
 
 function App() {
   return (
      <BrowserRouter>
       <Routes>
         {/* default -> services */}
-        <Route path="/" element={<Navigate to="/services" replace />} />
+        <Route path="/" element={<Navigate to="/homepage" replace />} />
+        <Route path="/homepage" element={<HomePage />} />
         <Route path="/services" element={<HomePageServices />} />
         <Route path="/profile" element={<ProfileScreen />} />
         {/* 404 */}
