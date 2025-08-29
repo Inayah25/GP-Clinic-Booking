@@ -40,9 +40,10 @@ const Homepage = () => {
   };
 
   const handleBookAppointment = () => {
-    // If you're using React Router, navigate("/profile") instead
-    window.location.href = "/profile";
-  };
+  // Redirect user to appointment page
+  window.location.href = "/appointment";
+};
+
 
   const handleLogin = () => alert("Redirecting to login page...");
   const handleSignup = () => alert("Redirecting to signup page...");
