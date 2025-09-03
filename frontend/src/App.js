@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate, Link } from "react-router-dom";
 import ProfileScreen from "./Inayah/ProfileScreen";
 import HomePageServices from "./Inayah/HomePageServices";
 import HomePage from "./yu/homepage";
-
+import AppointmentForm from "./Inayah/AppointmentForm";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Route path="/homepage" element={<HomePage />} />
         <Route path="/services" element={<HomePageServices />} />
         <Route path="/profile" element={<ProfileScreen />} />
+        <Route path="/form" element={<AppointmentForm />} />
         {/* 404 */}
         <Route path="*" element={<div style={{ padding: 24 }}>Not Found</div>} />
       </Routes>
