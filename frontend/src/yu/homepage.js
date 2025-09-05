@@ -47,7 +47,7 @@ const Homepage = () => {
 
 
   const handleLogin = () => alert("Redirecting to login page...");
-  const handleSignup = () => alert("Redirecting to signup page...");
+  /*const handleSignup = () => alert("Redirecting to signup page...");*/
 
   return (
     <div>
@@ -60,8 +60,8 @@ const Homepage = () => {
           <a href="#appointment" onClick={(e) => { e.preventDefault(); handleNavClick("#appointment"); }}>Appointment</a>
         </div>
         <div className="auth-buttons">
-          <button id="loginBtn" onClick={handleLogin}>Login</button>
-          <button id="signupBtn" onClick={handleSignup}>Sign Up</button>
+          <button id="loginBtn" onClick={handleLogin}>Login or SignUp </button>
+          
         </div>
       </nav>
 

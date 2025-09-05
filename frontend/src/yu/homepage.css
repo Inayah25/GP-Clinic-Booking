@@ -52,7 +52,7 @@ nav.topbar {
 }
 
 #loginBtn { background: #000; color: #fff; }
-#signupBtn { background: #007bff; color: #fff; }
+/*#signupBtn { background: #007bff; color: #fff; }*/
 
 /* ============ Header / Title ============ */
 .logo { text-align: center; margin: 26px 0 6px; }
