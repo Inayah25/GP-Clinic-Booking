@@ -1,5 +1,6 @@
 import React from "react";
 import "./homepage.css";
+import { useNavigate } from "react-router-dom";
 
 // ✅ Replace these paths with where your images actually live
 import consultationImg from "../Images/consultation.jpg";
@@ -28,6 +29,7 @@ const services = [
 ];
 
 const Homepage = () => {
+  const navigate = useNavigate();
   const handleNavClick = (label) => {
     // simple smooth scroll to anchors
     const el = document.querySelector(label);
@@ -40,9 +42,8 @@ const Homepage = () => {
   };
 
   const handleBookAppointment = () => {
-  // Redirect user to appointment page
-  window.location.href = "/appointment";
-};
+    navigate("/form");
+  };
 
 
   const handleLogin = () => alert("Redirecting to login page...");
@@ -116,7 +117,35 @@ const Homepage = () => {
       </section>
 
       {/* ===== Footer strip ===== */}
-      <footer id="contact">Why Choose Us? | Info</footer>
+       {/* <footer id="contact">Why Choose Us? | Info</footer>*/}
+            {/* ===== Why Choose Us Section ===== */}
+      <section className="why-section" id="why-us">
+        <h2 className="why-heading">Why Choose Us?</h2>
+        <div className="why-band">
+          <div className="why-card">
+            <h3>Experienced Doctors</h3>
+            <p>
+              Our clinic is staffed with highly qualified doctors who bring years of 
+              expertise in general practice and patient care.
+            </p>
+          </div>
+          <div className="why-card">
+            <h3>Modern Facilities</h3>
+            <p>
+              We use advanced diagnostic equipment and a modern facility to ensure 
+              safe, reliable, and accurate health assessments.
+            </p>
+          </div>
+          <div className="why-card">
+            <h3>Patient-Centered Care</h3>
+            <p>
+              Every patient is unique. We focus on personalized treatment plans that 
+              prioritize your health and long-term wellness.
+            </p>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };
