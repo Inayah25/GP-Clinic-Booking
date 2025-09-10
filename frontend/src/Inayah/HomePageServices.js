@@ -39,7 +39,7 @@ function ServiceSlide({ title, img, desc }) {
 export default function Home() {
   const scrollerRef = useRef(null);
 
-  const scrollByAmount = (amount) => {
+  const _scrollByAmount = (amount) => {
     scrollerRef.current?.scrollBy({ left: amount, behavior: "smooth" });
   };
 

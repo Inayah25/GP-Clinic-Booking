@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ProfileScreen from "./Inayah/ProfileScreen";
 import HomePageServices from "./Inayah/HomePageServices";
 import HomePage from "./yu/homepage";
