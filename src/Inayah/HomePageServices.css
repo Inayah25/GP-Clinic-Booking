@@ -1,0 +1,101 @@
+:root{
+  --bg1:#e9f6ff;
+  --bg2:#cfe9ff;
+  --ink:#0f172a;
+  --ink-sub:#334155;
+  --card:#ffffff;
+  --radius: 22px;
+}
+
+/* Reset & background */
+html, body, #root, .App {
+  height:100%;
+  margin:0; padding:0;
+}
+*{ box-sizing:border-box; }
+
+.home-root{
+  min-height:100vh;
+  background: linear-gradient(to bottom, var(--bg1), var(--bg2));
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color: var(--ink);
+  padding-top: 16px;
+}
+
+/* Header */
+.home-header{
+  max-width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.home-heading{
+  font-size: clamp(28px, 5vw, 56px);
+  font-weight:500;
+  margin:0;
+}
+
+/* Carousel section */
+.services-carousel{
+  position: relative;                               /* allows absolute buttons inside */
+  max-width: min(1100px, 92vw);                     /* <-- constrain width */
+  margin: clamp(16px, 4vw, 28px) auto clamp(40px, 8vw, 80px);
+  padding: clamp(16px, 3vw, 24px);
+  border-radius: 28px;
+  /* soft light gradient that matches the page */
+  background:
+    radial-gradient(160% 140% at 15% 10%, rgba(255,255,255,.55) 0%, rgba(255,255,255,0) 60%),
+    linear-gradient(135deg, #f9fdff 0%, #eef7ff 60%, #e8f2ff 100%);
+  box-shadow: 0 28px 60px rgba(10, 24, 38, .12);
+  border: 1px solid rgba(255,255,255,.6);
+  overflow: hidden;                                  /* hide inner overflow/glows */
+}
+.carousel-controls{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display:flex;
+  gap: 8px;
+  z-index: 2;
+}
+.slides-container{
+  display:flex;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  /* remove margins that caused extra width */
+  margin: 0;
+}
+.service-slide{
+  flex: 0 0 100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: clamp(20px, 6vw, 60px);
+  padding: clamp(20px, 6vw, 60px);
+  scroll-snap-align:start;
+}
+.card-left{ flex:1; display:flex; justify-content:center; }
+.service-img{
+  max-width: 320px;
+  width:100%;
+  border-radius: 22px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+.text-right{ flex:1; }
+.service-title{
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight:800; margin: 0 0 12px;
+}
+.service-desc{
+  font-size: clamp(15px, 2vw, 18px);
+  line-height:1.55; color:#334155;
+}
+
+/* Mobile: stack card above text */
+@media(max-width:700px){
+  .service-slide{ flex-direction:column; text-align:center; }
+  .card-left, .text-right{ flex:unset; }
+}
